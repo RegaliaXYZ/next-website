@@ -1,15 +1,15 @@
 import { NextPage } from 'next';
 import React from 'react';
-import GameOfLife from '../../components/GameOfLife';
+import Astar from '../../components/Astar';
 import Navbar from '../../components/Navbar';
 
-const GameOfLifeDemo: NextPage = () => {
+const AstarDemo: NextPage = () => {
   return (
     <div className="flex flex-col h-screen dark:bg-slate-600 bg-white">
       <Navbar page="Home" />
-      <GameOfLife />
+      <Astar />
     </div>
   );
 };
 
-export default GameOfLifeDemo;
+export default AstarDemo;

@@ -1,8 +1,6 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import Navbar from "../components/Navbar";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Navbar from '../components/Navbar';
 
 const Home: NextPage = () => {
   return (
@@ -15,7 +13,7 @@ const Home: NextPage = () => {
       <Navbar page="Regalia" />
       <main className="flex flex-col">
         <h1 className="text-3xl md:text-4xl font-medium mb-2 self-center p-6">
-          Homepage under construction, you can head to{" "}
+          Homepage under construction, you can head to{' '}
           <span className="text-green-300">Projects</span> tab to see the
           current demos.
         </h1>
