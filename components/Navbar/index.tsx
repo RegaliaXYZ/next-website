@@ -1,33 +1,33 @@
-import { MoonIcon, SunIcon } from '@heroicons/react/outline';
-import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import { MoonIcon, SunIcon } from "@heroicons/react/outline";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
 
-const Navbar = ({ page = '' }) => {
-  const [theme, setTheme] = useState<string>('dark');
+const Navbar = ({ page = "" }) => {
+  const [theme, setTheme] = useState<string>("dark");
 
   useEffect(() => {
     if (
-      localStorage.theme === 'dark' ||
-      (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
-      document.documentElement.classList.add('dark');
-      setTheme('dark');
+      document.documentElement.classList.add("dark");
+      setTheme("dark");
     } else {
-      document.documentElement.classList.remove('dark');
-      setTheme('light');
+      document.documentElement.classList.remove("dark");
+      setTheme("light");
     }
   }, []);
 
   const changeTheme = () => {
-    if (theme === 'dark') {
-      document.documentElement.classList.remove('dark');
-      setTheme('light');
-      localStorage.theme = 'light';
+    if (theme === "dark") {
+      document.documentElement.classList.remove("dark");
+      setTheme("light");
+      localStorage.theme = "light";
     } else {
-      document.documentElement.classList.add('dark');
-      setTheme('dark');
-      localStorage.theme = 'dark';
+      document.documentElement.classList.add("dark");
+      setTheme("dark");
+      localStorage.theme = "dark";
     }
   };
 
@@ -51,13 +51,8 @@ const Navbar = ({ page = '' }) => {
         </button>
       </div>
       <div className="w-full block lg:flex lg:items-center lg:w-auto">
-        <Link href="/projects" passHref>
-          <p className="lg:inline-block lg:mt-0 text-teal-400 hover:text-white mr-4">
-            Projects
-          </p>
-        </Link>
         <div>
-          {theme === 'dark' ? (
+          {theme === "dark" ? (
             <SunIcon
               className="h-6 w-6 text-gray-300"
               aria-hidden="true"

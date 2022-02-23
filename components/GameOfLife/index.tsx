@@ -127,8 +127,8 @@ const GameOfLife = () => {
   return (
     <>
       {board.length === 0 && (
-        <div className="w-full max-w-xs self-center">
-          <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div className="flex flex-col justify-center w-full max-w-xs self-center h-screen">
+          <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 items-center">
             <div className="mb-4">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
